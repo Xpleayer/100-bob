@@ -1,0 +1,11 @@
+// Main SCSS entry file
+// Import your partials here as you develop them
+
+// global styles
+@import 'base/global';
+
+
+// Layout styles
+@import 'layouts/header';
+@import 'layouts/footer';
+
