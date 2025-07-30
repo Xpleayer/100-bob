@@ -2,7 +2,7 @@ import React from 'react';
 import './scss/main.scss';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
-import About from './sections/About';
+import TextblockMedia from './sections/textblock-media.jsx';
 import Features from './sections/Features';
 import Packages from './sections/Packages';
 import CallToAction from './sections/CallToAction';
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <main className="main" id={'site-content'}>
         <Hero />
-        <About />
+        <TextblockMedia />
         <Features />
         <Packages />
         <CallToAction />

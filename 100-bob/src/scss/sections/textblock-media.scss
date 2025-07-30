@@ -1,0 +1,120 @@
+.textblock-media {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1/-1;
+  background: var(--color-black);
+  padding-block: 2rem;
+
+
+  &__container{
+    display: grid;
+    grid-template-columns:subgrid;
+    grid-column: 1/-1;
+    margin-inline: 5vw;
+
+    @media( min-width: 45rem) {
+      block-size: 12rem;
+    }
+
+    @media( min-width: 50rem) {
+      block-size: 15rem;
+    }
+  }
+
+  &__title{
+    color: var(--color-primary-green);
+    grid-column: 1/-1;
+    grid-row: 1;
+    margin-block-start: 0;
+
+    &-break {
+      display: block; /* Make it a line break by default for screens under 450px */
+
+      @media (min-width: 450px) {
+        display: inline; /* Display as inline for screens 450px and wider */
+      }
+    }
+
+    @media (min-width: 28.125rem) {
+      font-size: 1.6rem;
+      justify-self: center;
+    }
+
+    @media (min-width: 33.4375rem) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 40rem) {
+      font-size: 2.4rem;
+    }
+
+    @media (min-width: 45rem) {
+      font-size: 1.3rem;
+      max-block-size: 2rem;
+      grid-row: 1;
+      grid-column: 8/-1;
+      justify-self: start;
+    }
+  }
+
+  &__image{
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-img{
+      background-image: var(--tectblock-media-welcome-image);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      inline-size: 100%;
+    }
+
+    @media (min-width: 33.4375rem) {
+      grid-column: 1/-8;
+      grid-row: 2;
+      inline-size: 100%;
+    }
+
+    @media (min-width: 45rem) {
+      grid-column: 1/-8;
+      grid-row: 1;
+      max-inline-size: 23.75rem;
+      inline-size: 100%;
+      max-block-size: 20rem;
+      block-size: 70%;
+      overflow: clip;
+    }
+  }
+
+  &__content{
+    grid-column: 1/-1;
+    grid-row: 3;
+
+    @media( min-width: 33.4375rem){
+      grid-column: 8/-1;
+      grid-row: 2;
+    }
+
+    @media( min-width: 45rem){
+      grid-column: 8/-1;
+      grid-row: 1;
+      margin-block-start: 2rem;
+      block-size: fit-content;
+    }
+  }
+
+  &__text{
+    color: var(--color-white);
+  }
+
+  &__quote{
+    color: var(--color-primary-red);
+
+    &-text{
+      margin-block: 0;
+    }
+  }
+}
