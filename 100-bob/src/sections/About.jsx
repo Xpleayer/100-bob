@@ -1,11 +1,18 @@
 import React from 'react';
+import WelkomImage from '../assets/imgs/stock/welcome_image.jpg';
 
 const About = () => {
+
+    const WelkomStyle = {
+        '--about-welcome-image': `url(${WelkomImage})`,
+    };
+
+
   return (
-    <section className="about">
+    <section className="about" style={WelkomStyle}>
       <div className="about__container">
         <div className="about__image">
-          <img src="/instructor.jpg" alt="Driving Instructor" className="about__image-img" />
+          <img src={WelkomImage} alt="Driving Instructor" className="about__image-img" />
         </div>
         <div className="about__content">
           <h2 className="about__title">Welkom bij Rijschool 100% BOB</h2>

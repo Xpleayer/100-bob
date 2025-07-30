@@ -16,4 +16,15 @@
   min-block-size: 10vh;
   min-inline-size: 100vw;
   z-index: 99;
+
+  &__container{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+    inline-size: 100%;
+    margin-inline: 5vw;
+    align-items: center;
+    position: relative;
+    z-index: 101;
+  }
 }

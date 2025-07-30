@@ -1,0 +1,120 @@
+.hero {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1/-1;
+  background-image: var(--hero-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; // Required for triangle positioning
+  overflow: hidden; // Prevent triangle from overflowing
+
+  @media(min-width: 36.25rem) {
+    max-block-size: 50vh;
+    min-block-size: 30vh;
+  }
+
+  @media(min-width: 48rem) {
+    max-block-size: 45vh;
+    min-block-size: 30vh;
+  }
+
+  &__container {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: subgrid;
+    background: var(--color-secondary-green);
+
+    @media(min-width: 36.25rem) {
+      align-items: center;
+    }
+
+    @media(min-width: 48rem) {
+      background: none;
+    }
+  }
+
+  &__content {
+    grid-column: 1/-1;
+    display: grid;
+    margin-inline: 5vw;
+    grid-template-columns: subgrid;
+    z-index: 3;
+
+
+    @media(min-width: 36.25rem) {
+      block-size: fit-content;
+    }
+
+  }
+
+  &__title {
+    grid-column: 1/-1;
+    color: var(--color-white);
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    grid-column: 1/-1;
+    color: var(--color-white);
+    margin-block-end: 1rem;
+    margin-block-start: 0;
+  }
+
+  &__actions {
+    grid-column: 1/-1;
+    margin-block-end: 1rem;
+  }
+
+  &__triangle-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+    display: none; /* Hide by default */
+
+    @media(min-width: 48rem) {
+      display: block; /* Show only at 48rem and above */
+    }
+  }
+
+  &__triangle {
+    position: absolute;
+    max-block-size: 52rem;
+    height: auto;
+    fill: white;
+    inset: -28rem -12rem;
+  }
+
+
+  // Button styling
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &--primary {
+      background-color: var(--color-primary-yellow);
+      color: var(--color-black);
+
+      &:hover {
+        background-color: var(--color-secondary-yellow);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}

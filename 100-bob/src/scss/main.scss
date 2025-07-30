@@ -3,9 +3,20 @@
 
 // global styles
 @import 'base/global';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
 
 // Layout styles
 @import 'layouts/header';
 @import 'layouts/footer';
+
+// sections
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/features';
+@import 'sections/packages';
+@import 'sections/cta';
+@import 'sections/contact';
+@import 'sections/testimonies';
 
