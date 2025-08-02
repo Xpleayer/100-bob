@@ -119,7 +119,7 @@
     position: fixed;
     top: var(--nav-height, 10vh);
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 0;
     overflow: hidden;
     background-color: #000;
@@ -133,6 +133,7 @@
     &--open {
       height: calc(100vh - var(--nav-height, 10vh));
       overflow-y: auto;
+      overflow-x: hidden;
     }
 
     @media (min-width: 60.625rem) {

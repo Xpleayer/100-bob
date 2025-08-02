@@ -6,8 +6,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; // Required for triangle positioning
-  overflow: hidden; // Prevent triangle from overflowing
+  position: relative;
+  overflow: hidden;
 
   @media(min-width: 36.25rem) {
     max-block-size: 50vh;
@@ -19,6 +19,8 @@
     min-block-size: 30vh;
   }
 
+
+
   &__container {
     grid-column: 1/-1;
     display: grid;
@@ -29,9 +31,15 @@
       align-items: center;
     }
 
+    @media (min-width: 45rem) {
+      grid-column: 2/-2;
+      background: none;
+    }
+
     @media(min-width: 48rem) {
       background: none;
     }
+
   }
 
   &__content {
@@ -77,7 +85,7 @@
     z-index: 1;
     display: none; /* Hide by default */
 
-    @media(min-width: 48rem) {
+    @media(min-width: 45rem) {
       display: block; /* Show only at 48rem and above */
     }
   }
@@ -88,6 +96,27 @@
     height: auto;
     fill: white;
     inset: -28rem -12rem;
+
+    @media(min-width: 57.5rem) {
+      inset: -27rem -41rem;
+    }
+
+
+    @media(min-width: 87.5rem) {
+      inset: -27rem -41rem;
+    }
+
+    @media(min-width: 93rem) {
+      inset: -27rem -31rem;
+    }
+
+    @media(min-width: 106.25rem) {
+      inset: -27rem -22rem;
+    }
+
+    @media(min-width: 125rem) {
+      inset: -27rem -12rem;
+    }
   }
 
 

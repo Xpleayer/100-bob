@@ -3,8 +3,8 @@ import './scss/main.scss';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
 import TextblockMedia from './sections/textblock-media.jsx';
-import Features from './sections/Features';
-import Packages from './sections/Packages';
+import Tiles from './sections/tiles.jsx';
+import PackagesSection from './sections/Packages-section.jsx';
 import CallToAction from './sections/CallToAction';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
@@ -17,8 +17,8 @@ function App() {
       <main className="main" id={'site-content'}>
         <Hero />
         <TextblockMedia />
-        <Features />
-        <Packages />
+        <Tiles />
+        <PackagesSection />
         <CallToAction />
         <Contact />
         <Testimonials />

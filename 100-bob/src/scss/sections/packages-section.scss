@@ -1,0 +1,205 @@
+.packages-section{
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1/-1;
+
+  @media (min-width: 50rem) {
+    padding-block-start: 0;
+    padding-block-end: 5.5rem;
+  }
+
+  &__container{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+    margin-inline: 5vw;
+
+    @media (min-width: 45rem) {
+      grid-column: 2/-2;
+    }
+  }
+
+  &__title{
+    grid-column: 1/-1;
+    color: var(--color-primary-green);
+    margin-block-end: 2rem;
+    text-align: center;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/-1;
+    gap: 2rem;
+
+    @media (min-width: 45rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 60rem) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.package-card{
+  background: var(--color-white);
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  min-inline-size: 17.625rem;
+  max-inline-size: 18.75rem;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  // Card variants
+  &.first {
+  }
+
+  &.second {
+    border-top: 4px solid var(--color-accent-blue);
+  }
+
+  &.third {
+    border-top: 4px solid var(--color-primary-orange);
+  }
+
+  &.fourth {
+    border-top: 4px solid var(--color-accent-yellow);
+  }
+
+  // Featured card
+  &--featured {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-width: 4px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: -2rem;
+    background: var(--color-primary-yellow);
+    color: var(--color-black);
+    padding: 0.25rem 2rem;
+    transform: rotate(45deg);
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+  &__head{
+    padding: 1.5rem;
+    border-radius: 0.5rem 0 0 0;
+    background: var(--color-primary-red);
+    color: var(--color-white);
+    .third & {
+      background: var(--color-primary-green);
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--color-text-dark);
+  }
+
+  &__lessons {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-block-end: 1rem;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: solid var(--color-primary-red) 0.1875rem;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    border-top: none;
+
+    .third & {
+      border-color: var(--color-primary-green);
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-block-end: 1.5rem;
+    color: var(--color-primary-green);
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+  }
+
+  &__feature {
+    padding-block: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__button {
+    background: var(--color-primary-green);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+
+    &:hover {
+      background-color: #0b7b55; /* Darker shade for hover instead of using darken() */
+    }
+
+    .first & {
+      background: var(--color-primary-green);
+      &:hover {
+        background-color: #0b7b55; /* Darker green */
+      }
+    }
+
+    .second & {
+      background: var(--color-accent-blue);
+      &:hover {
+        background-color: #0056b3; /* Darker blue */
+      }
+    }
+
+    .third & {
+      background: var(--color-primary-orange);
+      &:hover {
+        background-color: #e06000; /* Darker orange */
+      }
+    }
+
+    .fourth & {
+      background: var(--color-accent-yellow);
+      &:hover {
+        background-color: #d9b000; /* Darker yellow */
+      }
+    }
+  }
+}
