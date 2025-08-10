@@ -20,12 +20,16 @@
   box-shadow: var(--shadow-xl, 0 0 0.625rem rgba(30,30,30,0.33));
   position: fixed;
   isolation: isolate;
-  min-block-size: var(--nav-height, 10vh);
+  min-block-size: var(--nav-height, 12vh);
   min-inline-size: 100vw;
   inline-size: 100vw;
   z-index: 100;
   opacity: 1;
   transition: opacity 1s ease-in-out;
+
+  @media(min-width: 60.625rem){
+    min-block-size: var(--nav-height, 10vh);;
+  }
 
 
   &__container{
@@ -117,7 +121,7 @@
   &__nav{
     // Default styling for mobile (320px)
     position: fixed;
-    top: var(--nav-height, 10vh);
+    top: var(--nav-height, 12vh);
     left: 0;
     width: 100vw;
     height: 0;
@@ -131,7 +135,7 @@
     justify-content: flex-start;
 
     &--open {
-      height: calc(100vh - var(--nav-height, 10vh));
+      height: calc(100vh - var(--nav-height, 12vh));
       overflow-y: auto;
       overflow-x: hidden;
     }
@@ -172,7 +176,6 @@
       transform: none;
       flex-direction: row;
       gap: 2rem;
-      width: auto;
       transition: none;
     }
   }

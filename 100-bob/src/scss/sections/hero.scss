@@ -101,6 +101,10 @@
       inset: -27rem -41rem;
     }
 
+    @media(max-height: 60.625rem) {
+      inset: -25rem -41rem;
+    }
+
 
     @media(min-width: 87.5rem) {
       inset: -27rem -41rem;

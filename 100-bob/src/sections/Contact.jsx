@@ -1,34 +1,71 @@
 import React from 'react';
 
 const Contact = () => {
-  return (
-    <section className="contact">
-      <div className="contact__container">
-        <h2 className="contact__title">Neem contact op</h2>
-        <p className="contact__text">We staan klaar om al je vragen te beantwoorden</p>
+    return (
+        <section className="contact">
+            <div className="contact__container">
+                <div className="contact__content">
+                    <h2 className="contact__title">Neem contact op</h2>
+                    <p className="contact__text">We staan klaar om al je vragen te beantwoorden</p>
+                </div>
+                <div className="contact__methods">
+                    <div className="contact__method">
+                        <h3 className="contact__method-title">Openingstijden</h3>
+                        <p className="contact__method-text">Ma-Vr: 9:00-18:00</p>
 
-        <div className="contact__methods">
-          <div className="contact__method">
-            <h3 className="contact__method-title">Openingstijden</h3>
-            <p className="contact__method-text">Ma-Vr: 9:00-18:00</p>
-            <a href="tel:+31612345678" className="contact__method-button">Bel nu</a>
-          </div>
+                        <div className="contact__scheduel-container">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_3261)">
+                                    <path d="M18.5781 10C18.5781 12.1549 17.7221 14.2215 16.1984 15.7452C14.6746 17.269 12.608 18.125 10.4531 18.125C8.29824 18.125 6.23162 17.269 4.70788 15.7452C3.18415 14.2215 2.32812 12.1549 2.32812 10C2.32812 7.84512 3.18415 5.77849 4.70788 4.25476C6.23162 2.73102 8.29824 1.875 10.4531 1.875C12.608 1.875 14.6746 2.73102 16.1984 4.25476C17.7221 5.77849 18.5781 7.84512 18.5781 10ZM0.453125 10C0.453125 12.6522 1.50669 15.1957 3.38206 17.0711C5.25742 18.9464 7.80096 20 10.4531 20C13.1053 20 15.6488 18.9464 17.5242 17.0711C19.3996 15.1957 20.4531 12.6522 20.4531 10C20.4531 7.34784 19.3996 4.8043 17.5242 2.92893C15.6488 1.05357 13.1053 0 10.4531 0C7.80096 0 5.25742 1.05357 3.38206 2.92893C1.50669 4.8043 0.453125 7.34784 0.453125 10ZM9.51562 4.6875V10C9.51562 10.3125 9.67188 10.6055 9.93359 10.7812L13.6836 13.2812C14.1133 13.5703 14.6953 13.4531 14.9844 13.0195C15.2734 12.5859 15.1562 12.0078 14.7227 11.7188L11.3906 9.5V4.6875C11.3906 4.16797 10.9727 3.75 10.4531 3.75C9.93359 3.75 9.51562 4.16797 9.51562 4.6875Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_3261">
+                                        <path d="M0.453125 0H20.4531V20H0.453125V0Z" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
 
-          <div className="contact__method">
-            <h3 className="contact__method-title">Bel direct</h3>
-            <p className="contact__method-text">+31 6 2302 4801</p>
-            <a href="tel:+31623024801" className="contact__method-button">Bel nu</a>
-          </div>
+                    <div className="contact__method">
+                        <h3 className="contact__method-title">Bel direct</h3>
+                        <p className="contact__method-text">+31 6 2302 4801</p>
 
-          <div className="contact__method">
-            <h3 className="contact__method-title">WhatsApp</h3>
-            <p className="contact__method-text">Stuur een bericht</p>
-            <a href="https://wa.me/31623024801" className="contact__method-button">Chat nu</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                        <div className="contact__call-container">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_3268)">
+                                    <path d="M7.01953 0.960842C6.71875 0.234279 5.92578 -0.15244 5.16797 0.0545917L1.73047 0.992092C1.05078 1.17959 0.578125 1.79678 0.578125 2.4999C0.578125 12.164 8.41406 19.9999 18.0781 19.9999C18.7812 19.9999 19.3984 19.5272 19.5859 18.8476L20.5234 15.4101C20.7305 14.6522 20.3438 13.8593 19.6172 13.5585L15.8672 11.996C15.2305 11.7304 14.4922 11.914 14.0586 12.4491L12.4805 14.3749C9.73047 13.0741 7.50391 10.8476 6.20312 8.09756L8.12891 6.52334C8.66406 6.08584 8.84766 5.35147 8.58203 4.71475L7.01953 0.964748V0.960842Z" fill="#374151"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_3268">
+                                        <path d="M0.578125 0H20.5781V20H0.578125V0Z" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div className="contact__method">
+                        <h3 className="contact__method-title">WhatsApp</h3>
+                        <p className="contact__method-text">Stuur een bericht</p>
+
+                        <div className="contact__whatsapp-container">
+                            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_3275)">
+                                    <path d="M18.2609 4.55156C16.2969 2.58281 13.6812 1.5 10.9016 1.5C5.16406 1.5 0.495312 6.16875 0.495312 11.9062C0.495312 13.7391 0.973438 15.5297 1.88281 17.1094L0.40625 22.5L5.92344 21.0516C7.44219 21.8813 9.15312 22.3172 10.8969 22.3172H10.9016C16.6344 22.3172 21.4062 17.6484 21.4062 11.9109C21.4062 9.13125 20.225 6.52031 18.2609 4.55156ZM10.9016 20.5641C9.34531 20.5641 7.82187 20.1469 6.49531 19.3594L6.18125 19.1719L2.90938 20.0297L3.78125 16.8375L3.575 16.5094C2.70781 15.1313 2.25313 13.5422 2.25313 11.9062C2.25313 7.13906 6.13437 3.25781 10.9062 3.25781C13.2172 3.25781 15.3875 4.15781 17.0187 5.79375C18.65 7.42969 19.6531 9.6 19.6484 11.9109C19.6484 16.6828 15.6687 20.5641 10.9016 20.5641ZM15.6453 14.0859C15.3875 13.9547 14.1078 13.3266 13.8688 13.2422C13.6297 13.1531 13.4563 13.1109 13.2828 13.3734C13.1094 13.6359 12.6125 14.2172 12.4578 14.3953C12.3078 14.5688 12.1531 14.5922 11.8953 14.4609C10.3672 13.6969 9.36406 13.0969 8.35625 11.3672C8.08906 10.9078 8.62344 10.9406 9.12031 9.94687C9.20469 9.77344 9.1625 9.62344 9.09687 9.49219C9.03125 9.36094 8.51094 8.08125 8.29531 7.56094C8.08438 7.05469 7.86875 7.125 7.70938 7.11563C7.55938 7.10625 7.38594 7.10625 7.2125 7.10625C7.03906 7.10625 6.75781 7.17188 6.51875 7.42969C6.27969 7.69219 5.60938 8.32031 5.60938 9.6C5.60938 10.8797 6.54219 12.1172 6.66875 12.2906C6.8 12.4641 8.50156 15.0891 11.1125 16.2188C12.7625 16.9312 13.4094 16.9922 14.2344 16.8703C14.7359 16.7953 15.7719 16.2422 15.9875 15.6328C16.2031 15.0234 16.2031 14.5031 16.1375 14.3953C16.0766 14.2781 15.9031 14.2125 15.6453 14.0859Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_3275">
+                                        <path d="M0.40625 0H21.4062V24H0.40625V0Z" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Contact;
