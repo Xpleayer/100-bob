@@ -22,6 +22,10 @@
     @media (min-width: 50rem) {
       margin-inline: 0;
     }
+
+    @media (min-width: 98.75rem) { /* 1580px */
+      margin-inline: 0;
+    }
   }
 
   &__title{

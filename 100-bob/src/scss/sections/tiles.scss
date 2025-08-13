@@ -19,6 +19,10 @@
     @media (min-width: 45rem) {
       grid-column: 2/-2;
     }
+
+    @media (min-width: 98.75rem) { /* 1580px */
+      margin-inline: 0;
+    }
   }
 
   &__title {

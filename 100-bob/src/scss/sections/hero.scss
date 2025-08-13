@@ -49,6 +49,9 @@
     grid-template-columns: subgrid;
     z-index: 3;
 
+    @media (min-width: 98.75rem) { /* 1580px */
+      margin-inline: 0;
+    }
 
     @media(min-width: 36.25rem) {
       block-size: fit-content;
