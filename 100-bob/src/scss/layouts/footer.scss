@@ -27,4 +27,8 @@
     position: relative;
     z-index: 101;
   }
+
+  &__content{
+    grid-column: 1/-1;
+  }
 }
