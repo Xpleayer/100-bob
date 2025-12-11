@@ -16,6 +16,7 @@ import masiImg from '../assets/imgs/studenten/masi.jpg';
 // import rouzbehImg from '../assets/imgs/studenten/rouzbeh.jpg';
 
 const Testimonials = () => {
+  console.log('Testimonial images:', { mojtabaImg, nasimImg, marailysImg, masiImg });
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   // State to control autoplay

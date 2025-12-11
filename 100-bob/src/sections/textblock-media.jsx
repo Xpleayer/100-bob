@@ -2,6 +2,7 @@ import React from 'react';
 import WelkomImage from '../assets/imgs/stock/welcome_image.jpg';
 
 const TextblockMedia = () => {
+    console.log('Welkom image:', WelkomImage);
 
     const WelkomStyle = {
         '--textblock-media-welcome-image': `url(${WelkomImage})`,

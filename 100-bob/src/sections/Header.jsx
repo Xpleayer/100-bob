@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import logoImage from '../assets/imgs/Logo-removebg-preview 1.svg';
 
 const Header = () => {
+  console.log('Header logo image:', logoImage);
   const [menuOpen, setMenuOpen] = useState(false);
   const [tarievenDropdownOpen, setTarievenDropdownOpen] = useState(false);
   const location = useLocation();

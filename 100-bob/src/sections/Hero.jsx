@@ -3,8 +3,10 @@ import backgroundImage from '../assets/imgs/stock/image_1.png';
 
 const Hero = () => {
   // Using a custom CSS property to pass the image URL to CSS
+  console.log('Hero background image:', backgroundImage);
   const heroStyle = {
     '--hero-background-image': `url(${backgroundImage})`,
+    backgroundImage: `url(${backgroundImage})`, // Also add as direct style as fallback
   };
 
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assets/imgs/Logo-removebg-preview 1.svg';
 
 const Footer = () => {
+  console.log('Footer logo:', logo);
   return (
     <footer className="footer">
       <div className="footer__container">

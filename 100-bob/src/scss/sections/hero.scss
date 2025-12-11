@@ -8,15 +8,16 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  min-block-size: 40vh; /* Minimum height for mobile */
 
   @media(min-width: 36.25rem) {
     max-block-size: 50vh;
-    min-block-size: 30vh;
+    min-block-size: 35vh;
   }
 
   @media(min-width: 48rem) {
     max-block-size: 45vh;
-    min-block-size: 30vh;
+    min-block-size: 35vh;
   }
 
 
