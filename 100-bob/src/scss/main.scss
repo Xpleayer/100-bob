@@ -11,6 +11,11 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 
+// Pages
+@import 'pages/tarieven';
+@import 'pages/package-detail';
+@import 'pages/contact-page';
+
 // sections
 @import 'sections/hero';
 @import 'sections/textblock-media';
@@ -19,4 +24,15 @@
 @import 'sections/cta-proefles';
 @import 'sections/contact';
 @import 'sections/testimonies';
+@import 'sections/tarieven-hero';
+@import 'sections/basic-pricing';
+@import 'sections/package-comparison';
+@import 'sections/faq';
+@import 'sections/package-detail';
+@import 'sections/about-hero';
+@import 'sections/mission';
+@import 'sections/story';
+@import 'sections/team';
+@import 'sections/work-area';
+@import 'sections/about-cta';
 

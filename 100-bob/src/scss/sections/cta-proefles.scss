@@ -162,19 +162,44 @@
 
     &-button {
       width: 100%;
-      padding: 0.75rem;
-      background-color: var(--color-primary-green);
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, var(--color-primary-green) 0%, #0b7b55 100%);
       color: white;
       border: none;
-      border-radius: 0.25rem;
-      font-size: 1rem;
-      font-weight: 600;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       margin-top: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.6s;
+      }
 
       &:hover {
-        background-color: darken(#3CA768, 10%);
+        background: linear-gradient(135deg, #0b7b55 0%, var(--color-primary-green) 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(11, 123, 85, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+        &::before {
+          left: 100%;
+        }
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
     }
   }

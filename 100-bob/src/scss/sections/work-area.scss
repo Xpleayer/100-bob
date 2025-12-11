@@ -1,0 +1,148 @@
+@use '../abstracts/mixins' as *;
+
+.work-area {
+  background: #000000;
+  padding: 4rem 2rem;
+
+  @include mobile {
+    padding: 3rem 1.5rem;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary-green);
+    margin: 0 0 3rem;
+    text-align: center;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__map {
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .leaflet-container {
+      border-radius: 12px 12px 0 0;
+      z-index: 1;
+    }
+
+    .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+    }
+
+    .leaflet-popup-content {
+      margin: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    @include mobile {
+      .leaflet-container {
+        height: 300px !important;
+      }
+    }
+  }
+
+  &__map-placeholder {
+    background: linear-gradient(135deg, #5a6c7d 0%, #465766 100%);
+    color: white;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &__map-markers {
+    background: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__marker {
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__info {
+    // Info content
+  }
+
+  &__info-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary-yellow);
+    margin: 0 0 1rem;
+  }
+
+  &__info-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin: 0 0 2rem;
+  }
+
+  &__locations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__location {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  &__location-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  &__location-content {
+    flex: 1;
+  }
+
+  &__location-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary-green);
+    margin: 0 0 0.5rem;
+  }
+
+  &__location-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+

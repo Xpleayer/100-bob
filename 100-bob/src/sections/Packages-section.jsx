@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Create a reusable PackageCard component
 const PackageCard = ({
@@ -8,7 +9,8 @@ const PackageCard = ({
                          features,
                          variant = '',
                          isFeatured = false,
-                         customClass = ''
+                         customClass = '',
+                         link = '#'
                      }) => {
     const cardClasses = `package-card ${variant} ${isFeatured ? 'package-card--featured' : ''} ${customClass}`.trim();
 
@@ -26,7 +28,7 @@ const PackageCard = ({
                         <li key={index} className="package-card__feature">✓ {feature}</li>
                     ))}
                 </ul>
-                <button className="package-card__button">Bekijk details</button>
+                <Link to={link} className="package-card__button">Bekijk details</Link>
             </div>
         </div>
     );
@@ -42,10 +44,10 @@ const PackagesSection = () => {
             features: [
                 "10 praktijklessen",
                 "Geen examen",
-                "Nieuwe auto",
-                "Flexibel plannen"
+                "Nieuwe auto"
             ],
-            variant: "first"
+            variant: "first",
+            link: "/pakket/starter"
         },
         {
             title: "Standaard",
@@ -54,10 +56,10 @@ const PackagesSection = () => {
             features: [
                 "15 praktijklessen",
                 "Geen examen",
-                "Nieuwe auto",
-                "Flexibel plannen"
+                "Nieuwe auto"
             ],
-            variant: "second"
+            variant: "second",
+            link: "/pakket/standaard"
         },
         {
             title: "Comfort",
@@ -70,7 +72,8 @@ const PackagesSection = () => {
                 "Losse voorrĳding"
             ],
             variant: "third",
-            isFeatured: true
+            isFeatured: true,
+            link: "/pakket/comfort"
         },
         {
             title: "Premium",
@@ -79,10 +82,10 @@ const PackagesSection = () => {
             features: [
                 "25 praktijklessen",
                 "Examen + herexamen",
-                "Nieuwe auto",
-                "Voorrĳding inbegrepen"
+                "Nieuwe auto"
             ],
-            variant: "fourth"
+            variant: "fourth",
+            link: "/pakket/premium"
         }
     ];
 
@@ -94,6 +97,7 @@ const PackagesSection = () => {
                     {packages.map((pkg, index) => (
                         <PackageCard
                             key={index}
+                            link={pkg.link}
                             title={pkg.title}
                             lessons={pkg.lessons}
                             price={pkg.price}

@@ -6,8 +6,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__content">
-          <div className="footer__logo">
-            <img src={logo} alt="Rijschool 100% BOB" />
+          <div className="footer__logo-section">
+            <div className="footer__logo">
+              <img src={logo} alt="Rijschool 100% BOB" />
+            </div>
+            <div className="footer__contact-info">
+              <a href="tel:+31612345678">+31 6 1234 5678</a>
+              <a href="mailto:info@rijschoolbob.nl">info@rijschoolbob.nl</a>
+            </div>
           </div>
 
           <div className="footer__column">
@@ -64,13 +70,6 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-        </div>
-
-        <div className="footer__contact">
-          <div className="footer__contact-info">
-            <a href="tel:+31612345678">+31 6 1234 5678</a>
-            <a href="mailto:info@rijschoolbob.nl">info@rijschoolbob.nl</a>
           </div>
         </div>
 
