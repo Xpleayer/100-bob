@@ -39,10 +39,10 @@ const PackagesSection = () => {
     const packages = [
         {
             title: "Starter",
-            lessons: "10 lessen",
-            price: "825",
+            lessons: "10 uur",
+            price: "650",
             features: [
-                "10 praktijklessen",
+                "10 praktijkuren",
                 "Geen examen",
                 "Nieuwe auto"
             ],
@@ -51,10 +51,10 @@ const PackagesSection = () => {
         },
         {
             title: "Standaard",
-            lessons: "15 lessen",
-            price: "1.237",
+            lessons: "15 uur",
+            price: "975",
             features: [
-                "15 praktijklessen",
+                "15 praktijkuren",
                 "Geen examen",
                 "Nieuwe auto"
             ],
@@ -63,13 +63,13 @@ const PackagesSection = () => {
         },
         {
             title: "Comfort",
-            lessons: "20 lessen + examen",
-            price: "1.650",
+            lessons: "20 uur + examen",
+            price: "1.300",
             features: [
-                "20 praktijklessen",
+                "20 praktijkuren",
                 "Examen inbegrepen",
                 "Nieuwe auto",
-                "Losse voorrĳding"
+                "Losse voorrijding"
             ],
             variant: "third",
             isFeatured: true,
@@ -77,11 +77,11 @@ const PackagesSection = () => {
         },
         {
             title: "Premium",
-            lessons: "25 lessen + examen + herexamen",
-            price: "2.475",
+            lessons: "30 uur + examen + gratis herexamen",
+            price: "1.950",
             features: [
-                "25 praktijklessen",
-                "Examen + herexamen",
+                "30 praktijkuren",
+                "Examen + gratis herexamen",
                 "Nieuwe auto"
             ],
             variant: "fourth",

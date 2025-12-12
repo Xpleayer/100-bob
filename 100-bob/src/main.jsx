@@ -10,6 +10,7 @@ import ComfortPackage from './pages/ComfortPackage.jsx'
 import PremiumPackage from './pages/PremiumPackage.jsx'
 import OverOns from './pages/OverOns.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import AlgemeneVoorwaarden from './pages/AlgemeneVoorwaarden.jsx'
 import './index.css'
 import 'leaflet/dist/leaflet.css'
 
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/pakket/premium" element={<PremiumPackage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/over-ons" element={<OverOns />} />
+        <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

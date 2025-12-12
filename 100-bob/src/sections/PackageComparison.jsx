@@ -8,7 +8,7 @@ const PackageComparison = () => {
       exam: '✗',
       reExam: '✗',
       theory: '✗',
-      price: '825'
+      price: '650'
     },
     {
       name: 'Standaard',
@@ -16,7 +16,7 @@ const PackageComparison = () => {
       exam: '✗',
       reExam: '✗',
       theory: '✗',
-      price: '1.237'
+      price: '975'
     },
     {
       name: 'Comfort',
@@ -24,16 +24,16 @@ const PackageComparison = () => {
       exam: '✓',
       reExam: '✗',
       theory: '✗',
-      price: '1.650',
+      price: '1.300',
       popular: true
     },
     {
       name: 'Premium',
       lessons: '30',
       exam: '✓',
-      reExam: '✓',
+      reExam: '✓ (Gratis)',
       theory: '✗',
-      price: '2.475'
+      price: '1.950'
     }
   ];
 
@@ -56,7 +56,7 @@ const PackageComparison = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Aantal lessen</td>
+                <td>Aantal uur</td>
                 {packages.map((pkg, index) => (
                   <td key={index}>{pkg.lessons}</td>
                 ))}
@@ -72,7 +72,7 @@ const PackageComparison = () => {
               <tr>
                 <td>Herexamen</td>
                 {packages.map((pkg, index) => (
-                  <td key={index} className={pkg.reExam === '✓' ? 'included' : 'not-included'}>
+                  <td key={index} className={pkg.reExam.includes('✓') ? 'included' : 'not-included'}>
                     {pkg.reExam}
                   </td>
                 ))}
@@ -97,8 +97,8 @@ const PackageComparison = () => {
           </table>
         </div>
         <p className="package-comparison__note">
-          Alle pakketten zijn inclusief gebruik van een lesauto en flexibele planning<br />
-          Prijzen zijn inclusief BTW en geldig tot 31 december 2025
+          Alle pakketten zijn inclusief gebruik van een lesauto en flexibele planning. Automatische auto beschikbaar op aanvraag.<br />
+          Uitschrijfkosten zijn van toepassing volgens onze pakketten. Prijzen zijn inclusief BTW en geldig tot 31 december 2025.
         </p>
       </div>
     </section>

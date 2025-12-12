@@ -21,20 +21,36 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'Hoeveel lessen heb ik nodig?',
-      answer: 'Gemiddeld hebben leerlingen 30-40 lessen nodig om het rijbewijs te halen. Dit is echter heel persoonlijk en kan variëren. We kennen jouw instructiemaken zorgvuldig inschatting tijdens de proefles en passen het programma aan jouw niveau en leervermogen aan.'
+      question: 'Hoeveel uur heb ik nodig?',
+      answer: 'Gemiddeld hebben leerlingen 30-40 uur nodig om het rijbewijs te halen. Dit is echter heel persoonlijk en kan variëren. We maken een zorgvuldige inschatting tijdens de proefles en passen het programma aan jouw niveau en leervermogen aan.'
+    },
+    {
+      question: 'Wat zijn de kosten van uitschrijven?',
+      answer: 'Bij uitschrijving zijn kosten van toepassing. Binnen 1 maand na aanvang: 25% van de pakketprijs. Na 1 maand: 50% van de pakketprijs. Na 3 maanden: volledige pakketprijs. Reeds gegeven lessen worden afgetrokken tegen het losse lestarief van € 70 per uur.'
     },
     {
       question: 'Kan ik overstappen naar een ander pakket?',
       answer: 'Ja, je kunt altijd overstappen naar een groter pakket. We berekenen dan het verschil tussen de pakketten, waarbij je een voordeel houdt van het eerder gekochte pakket. Overstappen naar een kleiner pakket is helaas niet mogelijk.'
     },
     {
-      question: 'Hoeveel lessen heb ik nodig?',
-      answer: 'Gemiddeld hebben leerlingen 30-40 lessen nodig om het rijbewijs te halen. Dit is echter heel persoonlijk en kan variëren. We kennen jouw instructiemaken zorgvuldig inschatting tijdens de proefles en passen het programma aan jouw niveau en leervermogen aan.'
+      question: 'Is er een automatische auto beschikbaar?',
+      answer: 'Ja, een automatische auto is beschikbaar op aanvraag. Deze optie dient bij aanmelding te worden aangegeven. Neem contact met ons op om de beschikbaarheid te bespreken.'
     },
     {
-      question: 'Hoeveel lessen heb ik nodig?',
-      answer: 'Gemiddeld hebben leerlingen 30-40 lessen nodig om het rijbewijs te halen. Dit is echter heel persoonlijk en kan variëren. We kennen jouw instructiemaken zorgvuldig inschatting tijdens de proefles en passen het programma aan jouw niveau en leervermogen aan.'
+      question: 'Wat kost een proefles?',
+      answer: 'Een proefles kost € 65 voor 60 minuten. Dit is een vrijblijvende kennismaking met onze rijschool en instructeur, waarbij we je huidige niveau inschatten en een passend lesprogramma adviseren.'
+    },
+    {
+      question: 'Is het herexamen gratis in het Premium pakket?',
+      answer: 'Ja! In het Premium pakket is het herexamen volledig GRATIS inbegrepen. Dit geeft je de zekerheid van twee examenpogingen zonder extra kosten, perfect voor cursisten die maximale zekerheid willen.'
+    },
+    {
+      question: 'Wat is het verschil tussen losse lessen en pakketten?',
+      answer: 'Losse lessen kosten € 70 per uur, terwijl lessen in pakketten slechts € 65 per uur kosten. Met pakketten bespaar je dus € 5 per uur en heb je meer zekerheid over je voorbereiding op het rijbewijs.'
+    },
+    {
+      question: 'Kan ik lessen annuleren of verzetten?',
+      answer: 'Lessen kunnen tot 24 uur van tevoren kosteloos worden geannuleerd of verzet. Bij annulering binnen 24 uur wordt de les in rekening gebracht. Flexibele planning is belangrijk voor ons!'
     }
   ];
 
