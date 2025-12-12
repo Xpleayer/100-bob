@@ -16,8 +16,16 @@ const CallToAction = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted with data:', formData);
+
+        // Create WhatsApp message with form data
+        const message = `Hallo! Ik wil graag een proefles plannen.%0A%0ANaam: ${formData.name}%0ATelefoonnummer: ${formData.phone}`;
+
+        // WhatsApp number (without + or spaces)
+        const whatsappNumber = '31623024801';
+
+        // Open WhatsApp with pre-filled message
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+
         // Reset form after submission
         setState({name: '', phone: ''});
     };

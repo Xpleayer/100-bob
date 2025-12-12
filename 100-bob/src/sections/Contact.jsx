@@ -31,7 +31,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="contact__method">
+                        <a href="tel:+31623024801" className="contact__method contact__method--clickable">
                             <h3 className="contact__method-title">Bel direct</h3>
                             <p className="contact__method-text">+31 6 2302 4801</p>
 
@@ -50,9 +50,9 @@ const Contact = () => {
                                     </defs>
                                 </svg>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="contact__method">
+                        <a href="https://wa.me/31623024801" target="_blank" rel="noopener noreferrer" className="contact__method contact__method--clickable">
                             <h3 className="contact__method-title">WhatsApp</h3>
                             <p className="contact__method-text">Stuur een bericht</p>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                                     </defs>
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

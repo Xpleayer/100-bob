@@ -1,4 +1,5 @@
 import React from 'react';
+    import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/imgs/stock/image_1.png';
 
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
           <h1 className="hero__title"> Bob – daar kom je mee thuis. </h1>
             <h3 className="hero__subtitle">Jouw reis naar rijvaardigheid begint hier.</h3>
           <div className="hero__actions">
-            <button className="btn btn--primary">Bekijk tarieven</button>
+            <Link to="/tarieven" className="btn btn--primary">Bekijk tarieven</Link>
           </div>
         </div>
       </div>

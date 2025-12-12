@@ -2,6 +2,14 @@
   background-color: #000000;
   width: 100%;
 
+
+  &__mains{
+    padding-block-start: 8rem;
+
+    @media (min-width: 60rem) {
+    padding-block-start: 6.5rem;
+  }
+  }
   // Main Contact Section
   &__main {
     background: #000000;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../sections/Header';
 import Footer from '../sections/Footer';
 
@@ -21,9 +22,35 @@ const PackageDetailTemplate = ({ packageData }) => {
     }));
   };
 
+  const handleBookNow = () => {
+    const formSection = document.querySelector('.package-booking-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    // Create WhatsApp message with form data
+    const message = `Hallo! Ik wil graag het ${name} pakket boeken.%0A%0AVoornaam: ${formData.voornaam}%0AAchternaam: ${formData.achternaam}%0AEmail: ${formData.email}%0ATelefoonnummer: ${formData.telefoon}%0AGeboortedatum: ${formData.geboortedatum}%0AOpmerkingen: ${formData.opmerkingen || 'Geen'}`;
+
+    // WhatsApp number (without + or spaces)
+    const whatsappNumber = '31623024801';
+
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+
+    // Reset form after submission
+    setFormData({
+      voornaam: '',
+      achternaam: '',
+      email: '',
+      telefoon: '',
+      geboortedatum: '',
+      opmerkingen: '',
+      akkoord: false
+    });
   };
 
   const { name, lessons, price, pricePerLesson, savings, subtitle, description, features, whatYouLearn, variant, otherPackages } = packageData;
@@ -34,9 +61,9 @@ const PackageDetailTemplate = ({ packageData }) => {
       <main className="main">
         <section className="breadcrumb">
           <div className="breadcrumb__container">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             <span className="breadcrumb__separator">›</span>
-            <a href="/tarieven">Tarieven</a>
+            <Link to="/tarieven">Tarieven</Link>
             <span className="breadcrumb__separator">›</span>
             <span>{name} Pakket</span>
           </div>
@@ -109,15 +136,18 @@ const PackageDetailTemplate = ({ packageData }) => {
                   </div>
                 </div>
 
-                <button className={`package-booking__cta ${variant === 'comfort' ? 'package-booking__cta--comfort' : ''} ${variant === 'premium' ? 'package-booking__cta--premium' : ''}`}>
+                <button
+                  onClick={handleBookNow}
+                  className={`package-booking__cta ${variant === 'comfort' ? 'package-booking__cta--comfort' : ''} ${variant === 'premium' ? 'package-booking__cta--premium' : ''}`}
+                >
                   Boek nu
                 </button>
 
                 <div className="package-booking__questions">
                   <h4>Wil je sparen?</h4>
                   <p>Bel ons vrijblijvend voor advies of om al je vragen te beantwoorden.</p>
-                  <a href="tel:+31612345678" className="package-booking__phone">
-                    📞 +31 6 1234 5678
+                  <a href="tel:+31623024801" className="package-booking__phone">
+                    📞 +31 6 2302 4801
                   </a>
                 </div>
 
@@ -191,7 +221,7 @@ const PackageDetailTemplate = ({ packageData }) => {
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
-                  <a href={pkg.link} className="other-packages__button">Bekijk details</a>
+                  <Link to={pkg.link} className="other-packages__button">Bekijk details</Link>
                 </div>
               ))}
             </div>

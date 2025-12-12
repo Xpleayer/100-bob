@@ -13,6 +13,13 @@ const Tarieven = () => {
     <div className="tarieven-page">
       <Header />
       <main className="main" id="tarieven-content">
+        <section className="breadcrumb">
+          <div className="breadcrumb__container">
+            <a href="/">Home</a>
+            <span className="breadcrumb__separator">›</span>
+            <span>Tarieven</span>
+          </div>
+        </section>
         <TarievenHero />
         <BasicPricing />
         <PackagesSection />

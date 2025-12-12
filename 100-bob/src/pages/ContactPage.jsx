@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../sections/Header';
 import Footer from '../sections/Footer';
 
@@ -24,7 +25,16 @@ const ContactPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+
+        // Create WhatsApp message with form data
+        const message = `Hallo! Ik heb een vraag via het contactformulier.%0A%0ANaam: ${formData.naam}%0AEmail: ${formData.email}%0ATelefoonnummer: ${formData.telefoonnummer}%0ABericht: ${formData.bericht}`;
+
+        // WhatsApp number (without + or spaces)
+        const whatsappNumber = '31623024801';
+
+        // Open WhatsApp with pre-filled message
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+
         // Reset form
         setFormData({
             naam: '',
@@ -35,12 +45,19 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="contact-page-wrapper">
+        <div className="app contact-page">
             <Header />
-            <main className="main">
-                <div className="contact-page">
-                    {/* Main Contact Section */}
-                    <section className="contact-page__main">
+            <main className="main contact-page__mains" id="contact-content">
+                <section className="breadcrumb">
+                    <div className="breadcrumb__container">
+                        <Link to="/">Home</Link>
+                        <span className="breadcrumb__separator">›</span>
+                        <span>Contact</span>
+                    </div>
+                </section>
+
+                {/* Main Contact Section */}
+                <section className="contact-page__main">
                         <div className="contact-page__container">
                             {/* Left Column - Contact Form */}
                             <div className="contact-page__form-wrapper">
@@ -212,8 +229,7 @@ const ContactPage = () => {
                                 +31 6 2302 4801
                             </a>
                         </div>
-                    </section>
-                </div>
+                </section>
             </main>
             <Footer />
         </div>

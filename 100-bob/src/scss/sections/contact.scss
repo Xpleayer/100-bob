@@ -99,6 +99,8 @@
     padding: 1.5rem;
     border-radius: 0.625rem;
     border: 0.125rem solid var(--color-white);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @media (min-width: 30rem) { /* 480px */
       padding: 1.75rem;
@@ -110,6 +112,19 @@
       min-inline-size: 16.3125rem;
     }
 
+    &--clickable {
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      &:active {
+        transform: translateY(-2px);
+      }
+    }
+
     &:nth-child(1) {
       background-color: var(--color-primary-red);
       color: var(--color-white);
@@ -119,10 +134,18 @@
     &:nth-child(2) {
       background-color: var(--color-primary-yellow);
       color: var(--color-black);
+
+      &:hover {
+        box-shadow: 0 10px 25px rgba(240, 251, 89, 0.4);
+      }
     }
 
     &:nth-child(3) {
       background-color: var(--color-primary-green);
+
+      &:hover {
+        box-shadow: 0 10px 25px rgba(0, 165, 80, 0.4);
+      }
     }
   }
 
