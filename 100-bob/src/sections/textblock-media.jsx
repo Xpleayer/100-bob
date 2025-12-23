@@ -1,5 +1,5 @@
 import React from 'react';
-import WelkomImage from '../assets/imgs/stock/welcome_image.jpg';
+import WelkomImage from '../assets/imgs/stock/photo_8_2025-07-30_14-02-05.jpg';
 
 const TextblockMedia = () => {
     console.log('Welkom image:', WelkomImage);

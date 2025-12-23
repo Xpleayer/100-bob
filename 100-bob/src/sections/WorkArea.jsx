@@ -1,5 +1,5 @@
 import React from 'react';
-import {MapContainer, Marker, Polygon, Popup, TileLayer} from 'react-leaflet';
+import { MapContainer, Marker, Polygon, Popup, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 
 // Fix for default marker icon
@@ -11,79 +11,82 @@ L.Icon.Default.mergeOptions({
 });
 
 const WorkArea = () => {
-    // Amersfoort city boundary (approximate polygon covering the municipality)
-    const amersfoortBoundary = [
-        // North of Amersfoort, staying east of Soest
-        [52.2100, 5.3300],
-        [52.2250, 5.3600],
-
-        // Hoevelaken area (east / north-east)
-        [52.1800, 5.4700],
-        [52.1650, 5.5000],
-
-        // Leusden (south-east)
-        [52.1150, 5.4700],
-        [52.1000, 5.4400],
-
-        // South of Amersfoort
-        [52.0950, 5.3800],
-
-        // South-west but *not* touching Soest
-        [52.1150, 5.3300],
-        [52.1350, 5.3200],
-
-        // West side safely east of Soest
-        [52.1650, 5.3100],
-        [52.1900, 5.3150],
+    // GeoJSON polygon converted to Leaflet [lat, lng]
+    const workAreaBoundary = [
+        [52.10469262830944, 5.428400515782414],
+        [52.16608736075594, 5.5224985160895415],
+        [52.232225058689465, 5.530886479054175],
+        [52.26486253079648, 5.334899806356361],
+        [52.20992977100926, 5.243287914269956],
+        [52.1371393066774, 5.306892560286656],
+        [52.10469262830944, 5.428400515782414],
     ];
 
-    // Amersfoort center coordinates
-    const amersfoortCenter = [52.1561, 5.3878];
+    const locations = [
+        { name: 'Amersfoort', position: [52.1561, 5.3878] },
+        { name: 'Soest', position: [52.1730, 5.2910] },
+        { name: 'Baarn', position: [52.2110, 5.2870] },
+        { name: 'Nijkerk', position: [52.2200, 5.4860] },
+        { name: 'Spakenburg', position: [52.2500, 5.3700] },
+    ];
 
     return (
         <section className="work-area">
             <div className="work-area__container">
                 <h2 className="work-area__title">Ons Werkgebied</h2>
+
                 <div className="work-area__content">
                     <div className="work-area__map">
                         <MapContainer
-                            center={[52.1561, 5.3878]}
-                            zoom={11}
-                            style={{height: '400px', width: '100%', borderRadius: '12px'}}
+                            center={[52.18, 5.38]}
+                            zoom={10}
+                            style={{ height: '400px', width: '100%', borderRadius: '12px' }}
                             scrollWheelZoom={false}
                         >
                             <TileLayer
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
+
                             <Polygon
-                                positions={amersfoortBoundary}
+                                positions={workAreaBoundary}
                                 pathOptions={{
                                     color: '#00a550',
                                     fillColor: '#00a550',
                                     fillOpacity: 0.3,
-                                    weight: 3
+                                    weight: 3,
                                 }}
                             />
-                            <Marker position={amersfoortCenter}>
-                                <Popup>
-                                    <strong>Rijschool 100% BOB</strong><br/>
-                                    Amersfoort
-                                </Popup>
-                            </Marker>
+
+                            {locations.map((loc) => (
+                                <Marker key={loc.name} position={loc.position}>
+                                    <Popup>
+                                        <strong>Rijschool 100% BOB</strong>
+                                        <br />
+                                        {loc.name}
+                                    </Popup>
+                                </Marker>
+                            ))}
                         </MapContainer>
+
                         <div className="work-area__map-markers">
                             <div className="work-area__marker">📍 Hoofdlocatie</div>
-                            <div className="work-area__marker">📍 Leegheid</div>
+                            <div className="work-area__marker">📍 Werkgebied</div>
                         </div>
                     </div>
+
                     <div className="work-area__info">
-                        <h3 className="work-area__info-title">Rijlessen in Amersfoort en Almere</h3>
+                        <h3 className="work-area__info-title">
+                            Rijlessen in Amersfoort en omgeving
+                        </h3>
+
                         <p className="work-area__info-text">
-                            Onze rijschool is gevestigd in Amersfoort, maar we geven ook
-                            rijlessen in Almere en omgeving. We kennen de lokale wegen,
-                            kruispunten en examenparcours als geen ander.
+                            Onze rijschool is gevestigd in Amersfoort en verzorgt rijlessen in
+                            Soest, Baarn, Nijkerk, Spakenburg en omliggende plaatsen. Dankzij
+                            onze kennis van lokale wegen, kruispunten en examenroutes ben je
+                            optimaal voorbereid.
                         </p>
+
                         <div className="work-area__locations">
                             <div className="work-area__location">
                                 <div className="work-area__location-icon">📍</div>
@@ -94,21 +97,33 @@ const WorkArea = () => {
                                     </p>
                                 </div>
                             </div>
+
                             <div className="work-area__location">
                                 <div className="work-area__location-icon">📍</div>
                                 <div className="work-area__location-content">
-                                    <h4 className="work-area__location-title">Leusden</h4>
+                                    <h4 className="work-area__location-title">Soest & Baarn</h4>
                                     <p className="work-area__location-text">
-                                        Daarnaast zijn wij zeker ook bereikbaar in leusden voor rijlessen.
+                                        Rijlessen in zowel Soest als Baarn, inclusief woonwijken en examenroutes.
                                     </p>
                                 </div>
                             </div>
+
                             <div className="work-area__location">
                                 <div className="work-area__location-icon">📍</div>
                                 <div className="work-area__location-content">
-                                    <h4 className="work-area__location-title">Hoevelaken</h4>
+                                    <h4 className="work-area__location-title">Nijkerk</h4>
                                     <p className="work-area__location-text">
-                                        We bieden ook rijlessen aan in Hoevelaken en de nabije omgeving.
+                                        Actief in Nijkerk met lessen in en rondom het centrum en buitengebieden.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="work-area__location">
+                                <div className="work-area__location-icon">📍</div>
+                                <div className="work-area__location-content">
+                                    <h4 className="work-area__location-title">Spakenburg</h4>
+                                    <p className="work-area__location-text">
+                                        Rijlessen in Spakenburg en Bunschoten voor een complete voorbereiding.
                                     </p>
                                 </div>
                             </div>
@@ -121,4 +136,3 @@ const WorkArea = () => {
 };
 
 export default WorkArea;
-

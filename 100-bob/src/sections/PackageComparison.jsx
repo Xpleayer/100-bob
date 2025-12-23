@@ -4,14 +4,6 @@ const PackageComparison = () => {
   const packages = [
     {
       name: 'Starter',
-      lessons: '10',
-      exam: '✗',
-      reExam: '✗',
-      theory: '✗',
-      price: '650'
-    },
-    {
-      name: 'Standaard',
       lessons: '15',
       exam: '✗',
       reExam: '✗',
@@ -19,21 +11,29 @@ const PackageComparison = () => {
       price: '975'
     },
     {
+      name: 'Standaard',
+      lessons: '25',
+      exam: '✗',
+      reExam: '✗',
+      theory: '✗',
+      price: '1.625'
+    },
+    {
       name: 'Comfort',
-      lessons: '20',
+      lessons: '30',
       exam: '✓',
       reExam: '✗',
       theory: '✗',
-      price: '1.300',
+      price: '1.950',
       popular: true
     },
     {
       name: 'Premium',
-      lessons: '30',
+      lessons: '45',
       exam: '✓',
       reExam: '✓ (Gratis)',
       theory: '✗',
-      price: '1.950'
+      price: '2.925'
     }
   ];
 
@@ -97,7 +97,7 @@ const PackageComparison = () => {
           </table>
         </div>
         <p className="package-comparison__note">
-          Alle pakketten zijn inclusief gebruik van een lesauto en flexibele planning. Automatische auto beschikbaar op aanvraag.<br />
+          Alle pakketten zijn inclusief gebruik van een lesauto en flexibele planning. Keuze uit handgeschakelde of automaat.<br />
           Uitschrijfkosten zijn van toepassing volgens onze pakketten. Prijzen zijn inclusief BTW en geldig tot 31 december 2025.
         </p>
       </div>

@@ -39,36 +39,36 @@ const PackagesSection = () => {
     const packages = [
         {
             title: "Starter",
-            lessons: "10 uur",
-            price: "650",
+            lessons: "15 uur",
+            price: "975",
             features: [
-                "10 praktijkuren",
+                "15 praktijkuren",
                 "Geen examen",
-                "Nieuwe auto"
+                "Nieuwe auto (handgeschakeld of automaat)"
             ],
             variant: "first",
             link: "/pakket/starter"
         },
         {
             title: "Standaard",
-            lessons: "15 uur",
-            price: "975",
+            lessons: "25 uur",
+            price: "1.625",
             features: [
-                "15 praktijkuren",
+                "25 praktijkuren",
                 "Geen examen",
-                "Nieuwe auto"
+                "Nieuwe auto (handgeschakeld of automaat)"
             ],
             variant: "second",
             link: "/pakket/standaard"
         },
         {
             title: "Comfort",
-            lessons: "20 uur + examen",
-            price: "1.300",
+            lessons: "30 uur + examen",
+            price: "1.950",
             features: [
-                "20 praktijkuren",
+                "30 praktijkuren",
                 "Examen inbegrepen",
-                "Nieuwe auto",
+                "Nieuwe auto (handgeschakeld of automaat)",
                 "Losse voorrijding"
             ],
             variant: "third",
@@ -77,12 +77,12 @@ const PackagesSection = () => {
         },
         {
             title: "Premium",
-            lessons: "30 uur + examen + gratis herexamen",
-            price: "1.950",
+            lessons: "45 uur + examen + gratis herexamen",
+            price: "2.925",
             features: [
-                "30 praktijkuren",
+                "45 praktijkuren",
                 "Examen + gratis herexamen",
-                "Nieuwe auto"
+                "Nieuwe auto (handgeschakeld of automaat)"
             ],
             variant: "fourth",
             link: "/pakket/premium"

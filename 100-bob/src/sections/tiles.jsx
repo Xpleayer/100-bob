@@ -23,7 +23,7 @@ const Tiles = () => {
                             </div>
                             <h3 className="tiles__card-title">Nieuwe auto</h3>
                             <p className="tiles__card-description">Rijd in comfortabele, nieuwe auto's voorzien van alle
-                                moderne rijhulpsystemen.</p>
+                                moderne rijhulpsystemen. Keuze uit handgeschakelde of automaat.</p>
                         </div>
                     </div>
                     <div className="tiles__card third">

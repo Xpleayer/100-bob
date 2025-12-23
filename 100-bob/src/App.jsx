@@ -15,6 +15,11 @@ function App() {
     <div className="app">
       <Header />
       <main className="main" id={'site-content'}>
+        <section className="breadcrumb">
+          <div className="breadcrumb__container">
+            <span>Home</span>
+          </div>
+        </section>
         <Hero />
         <TextblockMedia />
         <Tiles />

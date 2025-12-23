@@ -155,7 +155,7 @@ const PackageDetailTemplate = ({ packageData }) => {
                   <h4>Waarom kiezen voor BOB?</h4>
                   <ul>
                     <li>✓ Persoonlijke aanpak</li>
-                    <li>✓ Moderne lesauto's</li>
+                    <li>✓ Moderne lesauto's (handgeschakeld of automaat)</li>
                     <li>✓ Flexibele planning</li>
                     <li>✓ Ervaren instructeurs</li>
                   </ul>

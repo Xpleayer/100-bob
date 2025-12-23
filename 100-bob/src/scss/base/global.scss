@@ -1,5 +1,6 @@
 // Reset styles
 // Define your reset styles here
+@import '../abstracts/mixins';
 
 body{
     margin: 0;
@@ -30,14 +31,19 @@ body{
   max-block-size: 100%;
   min-inline-size: 100vw;
   inline-size: 100vw;
-  margin-block-start: 8rem;
-
-
-  @media(min-width: 60.625rem){
-    margin-block-start: 10vh;
-  }
 }
 
 .app {
   position: absolute;
+}
+
+.main{
+
+  @include desktop {
+    padding-top: 6.5rem;
+  }
+  @include mobile{
+    padding-top: 8rem;
+
+  }
 }

@@ -33,8 +33,8 @@ const FAQ = () => {
       answer: 'Ja, je kunt altijd overstappen naar een groter pakket. We berekenen dan het verschil tussen de pakketten, waarbij je een voordeel houdt van het eerder gekochte pakket. Overstappen naar een kleiner pakket is helaas niet mogelijk.'
     },
     {
-      question: 'Is er een automatische auto beschikbaar?',
-      answer: 'Ja, een automatische auto is beschikbaar op aanvraag. Deze optie dient bij aanmelding te worden aangegeven. Neem contact met ons op om de beschikbaarheid te bespreken.'
+      question: 'Kan ik kiezen tussen een handgeschakelde of automatische auto?',
+      answer: 'Ja, wij bieden zowel handgeschakelde als automatische lesauto\'s aan. Je kunt bij aanmelding aangeven welke voorkeur je hebt. Houd er rekening mee dat het type auto invloed heeft op het type rijbewijs dat je kunt behalen.'
     },
     {
       question: 'Wat kost een proefles?',

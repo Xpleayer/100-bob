@@ -1,7 +1,7 @@
 @use '../abstracts/mixins' as *;
 
 .about-hero {
-  background: #000000;
+  background: linear-gradient(135deg, var(--color-primary-green) 0%, #009650 100%);
   padding: 8rem 2rem 4rem;
   position: relative;
   overflow: hidden;
@@ -18,11 +18,11 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -15rem;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/src/assets/imgs/stock/welcome_image.jpg') center/cover;
+    background: url('/src/assets/imgs/stock/img.png') center/cover;
     opacity: 0.2;
     z-index: 0;
   }

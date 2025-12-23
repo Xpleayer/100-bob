@@ -28,7 +28,7 @@ const Story = () => {
             <div className="story__number">3</div>
             <h3 className="story__item-title">Ambitie</h3>
             <p className="story__item-text">
-              Vandaag blijven we innoveren met moderne lesauto's en persoonlijke 
+              Vandaag blijven we innoveren met moderne lesauto's (zowel handgeschakeld als automaat) en persoonlijke
               lesmethoden. Onze ambitie is om de regio te zijn.
             </p>
           </div>

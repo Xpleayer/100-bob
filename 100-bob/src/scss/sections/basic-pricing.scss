@@ -5,6 +5,10 @@
   padding: 4rem 2rem;
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -22,11 +26,14 @@
   }
 
   &__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -60,6 +67,10 @@
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-primary-green);
+  }
+
+  &__note{
+    padding-block-start: 1rem;
   }
 }
 

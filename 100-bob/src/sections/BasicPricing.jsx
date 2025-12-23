@@ -29,7 +29,7 @@ const BasicPricing = () => {
           </div>
         </div>
         <p className="basic-pricing__note">
-          * Uitschrijfkosten zijn van toepassing volgens onze pakketten. Automatische auto beschikbaar op aanvraag.
+          * Uitschrijfkosten zijn van toepassing volgens onze pakketten. Keuze uit handgeschakelde of automaat.
         </p>
       </div>
     </section>

@@ -42,10 +42,10 @@ const AlgemeneVoorwaarden = () => {
 
               <h3>2.2 Pakketten</h3>
               <ul>
-                <li>Starter pakket: 10 uur - € 650</li>
-                <li>Standaard pakket: 15 uur - € 975</li>
-                <li>Comfort pakket: 20 uur + examen - € 1.300</li>
-                <li>Premium pakket: 30 uur + examen + gratis herexamen - € 1.950</li>
+                <li>Starter pakket: 15 uur - € 975</li>
+                <li>Standaard pakket: 25 uur - € 1.625</li>
+                <li>Comfort pakket: 30 uur + examen - € 1.950</li>
+                <li>Premium pakket: 45 uur + examen + gratis herexamen - € 2.925</li>
               </ul>
 
               <h3>2.3 Betalingsvoorwaarden</h3>
@@ -75,10 +75,10 @@ const AlgemeneVoorwaarden = () => {
             <div className="terms-content__section">
               <h2>5. Lesauto en Materiaal</h2>
               <h3>5.1 Standaard lesauto</h3>
-              <p>Alle lessen worden gegeven in moderne, goed onderhouden lesauto's met dubbele bediening.</p>
+              <p>Alle lessen worden gegeven in moderne, goed onderhouden lesauto's met dubbele bediening. We bieden zowel handgeschakelde als automatische lesauto's aan.</p>
 
-              <h3>5.2 Automatische auto</h3>
-              <p>Een automatische auto is beschikbaar op aanvraag. Deze optie dient bij aanmelding te worden aangegeven.</p>
+              <h3>5.2 Keuze tussen handgeschakeld en automaat</h3>
+              <p>Je kunt kiezen tussen een handgeschakelde of automatische auto. Deze keuze dient bij aanmelding te worden aangegeven en kan van invloed zijn op het type rijbewijs dat je kunt behalen.</p>
 
               <h3>5.3 Schade</h3>
               <p>De cursist is aansprakelijk voor schade aan de lesauto die is ontstaan door grove nalatigheid of opzet. Het eigen risico bedraagt € 500.</p>
